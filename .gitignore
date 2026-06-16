@@ -1,11 +1,24 @@
-# React Native
+# Dependencies
 node_modules/
+
+# Expo
 .expo/
 expo-env.d.ts
+dist/
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
 .env
 .env.local
 .env.*.local
+
+# Metro Bundler
+.metro/
 
 # Android
 /android/.gradle
@@ -17,7 +30,8 @@ expo-env.d.ts
 /ios/build
 /ios/.xcode.env.local
 
-# Metro
-.metro/
+# Misc
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
