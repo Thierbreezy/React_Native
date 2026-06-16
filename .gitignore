@@ -1,0 +1,23 @@
+# React Native
+node_modules/
+.expo/
+expo-env.d.ts
+*.log
+.env
+.env.local
+.env.*.local
+
+# Android
+/android/.gradle
+/android/captures
+/android/app/build
+
+# iOS
+/ios/Pods
+/ios/build
+/ios/.xcode.env.local
+
+# Metro
+.metro/
+.DS_Store
+Thumbs.db
