@@ -35,3 +35,11 @@ yarn-error.log*
 Thumbs.db
 *.swp
 *.swo
+
+# Ignorer les dépôts Git imbriqués
+MiniGame-project/.git
+RNCourse/.git
+
+# Dépôts Git imbriqués
+MiniGame-project/.git
+RNCourse/.git

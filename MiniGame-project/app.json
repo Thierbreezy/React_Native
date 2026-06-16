@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "MiniGame-project",
+    "slug": "MiniGame-project",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/background.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/background.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thierbreezy.MiniGameproject",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/background.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.thierbreezy.MiniGameproject"
+    },
+    "web": {
+      "favicon": "./assets/background.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f490c020-e4d2-46d9-a46d-59476324a8fa"
+      }
+    }
+  }
+}
