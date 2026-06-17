@@ -3,7 +3,7 @@
     "name": "MiniGame-project",
     "slug": "MiniGame-project",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/background.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
