@@ -1,12 +1,11 @@
 {
   "expo": {
-    "name": "MEAL-APP1",
-    "slug": "MEAL-APP1",
+    "name": "MEAL-APP",
+    "slug": "MEAL-APP",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "backgroundColor": "#24180f",
     "ios": {
       "supportsTablet": true
     },
