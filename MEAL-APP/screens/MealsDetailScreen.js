@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { useLayoutEffect } from 'react';
+import {  useLayoutEffect } from 'react';
 import { Image, Text, View, ScrollView, StyleSheet } from 'react-native';
 
 import { MEALS } from '../data/dummy-data';
@@ -7,29 +7,46 @@ import MealDetails from '../components/MealDetails';
 import List from '../components/MealDetail/List';
 import Subtitle from '../components/MealDetail/Subtitle';
 import IconButton from '../components/IconButton';
+import { useDispatch, useSelector } from 'react-redux';
+//import { FavoritesContext } from '../store/context/favorite-context';
+import { addFavorite, removeFavorite } from '../store/redux/favorite'
 
 
 function MealsDetailScreen ({ route, navigation }){
+
+  //  const favoriteMealCtx = useContext(FavoritesContext);
+    const favoriteMealsIds = useSelector((state)=> state.favoriteMeals.Ids);
+
+    const dispatch = useDispatch();
     const mealId = route.params.mealId;
 
     const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
-    function headerButtonPressHandler(){
+    const mealIsFavorite = favoriteMealsIds.includes(mealId);
 
+    function changeFavoriteStatusHandler(){
+      if (mealIsFavorite) {
+        //favoriteMealCtx.removeFavorite(mealId);
+        dispatch(removeFavorite({ id: mealId }))
+      }
+      else{
+        //favoriteMealCtx.addFavorite(mealId);
+        dispatch(addFavorite({ id: mealId }))
+      }
     };
 
     useLayoutEffect(()=>{
         navigation.setOptions({
           headerRight: ()=> {
             return (<IconButton
-            icon="star"
+            icon={mealIsFavorite ? 'star' : 'star-outline'}
             color="white"
-            onPress={headerButtonPressHandler}
+            onPress={changeFavoriteStatusHandler}
           />
         );
        },
     });  
-    },[navigation, headerButtonPressHandler])
+    },[navigation, changeFavoriteStatusHandler])
 
     return <ScrollView>
         <Image style={styles.image} source={{uri: selectedMeal.imageUrl}}/>
