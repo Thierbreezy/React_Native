@@ -8,7 +8,7 @@ import { MEALS } from '../data/dummy-data';
 function FavoritesScreen() {
 
  //const favoriteMealsCtx = useContext(FavoritesContext);
-  const favoritemealIds = useSelector(state=>state.favoriteMeals.ids);
+  const favoriteMealIds = useSelector(state=>state.favoriteMeals.ids);
 
   const favoriteMeals = MEALS.filter((meal) =>
     //favoriteMealsCtx.ids.includes(meal.id)
